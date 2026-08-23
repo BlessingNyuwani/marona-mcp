@@ -1,0 +1,27 @@
+{
+  "name": "@marona/examples-mcp-typescript",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A production-shaped Marona MCP server example.",
+  "type": "module",
+  "packageManager": "pnpm@10.15.0",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/src/server.js",
+    "test": "pnpm build && node --test dist/test/*.test.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/node": "2.0.0",
+    "@modelcontextprotocol/server": "2.0.0",
+    "marona-sdk": "0.1.6",
+    "zod": "^4.2.0"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "2.0.0",
+    "@types/node": "^22.15.0",
+    "typescript": "^5.9.0"
+  }
+}
