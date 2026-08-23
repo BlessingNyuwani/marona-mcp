@@ -1,0 +1,1 @@
+"""Marona MCP Python example."""
