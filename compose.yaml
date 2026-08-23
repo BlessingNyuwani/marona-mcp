@@ -1,0 +1,22 @@
+name: marona-mcp
+
+services:
+  python:
+    build:
+      context: .
+      dockerfile: examples/python/Dockerfile
+    ports: ["62900:62900"]
+
+  typescript:
+    profiles: ["typescript"]
+    build:
+      context: .
+      dockerfile: examples/typescript/Dockerfile
+    ports: ["62901:62900"]
+
+  java:
+    profiles: ["java"]
+    build:
+      context: .
+      dockerfile: examples/java/Dockerfile
+    ports: ["62902:62900"]
