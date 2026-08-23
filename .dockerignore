@@ -1,0 +1,9 @@
+.git
+.github
+.idea
+**/.env*
+**/.venv
+**/__pycache__
+**/node_modules
+**/target
+**/dist
