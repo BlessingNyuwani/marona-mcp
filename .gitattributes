@@ -1,0 +1,8 @@
+# GitHub Linguist treats paths named "examples" as documentation by default.
+# These directories contain the repository's primary executable source code.
+examples/python/src/** -linguist-documentation
+examples/python/tests/** -linguist-documentation
+examples/typescript/src/** -linguist-documentation
+examples/typescript/test/** -linguist-documentation
+examples/java/src/** -linguist-documentation
+
