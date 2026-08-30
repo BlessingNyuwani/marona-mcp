@@ -8,20 +8,21 @@ of Marona AI Runtime.
 
 ## Implementations
 
-| Contract | Python | TypeScript | Java |
-| --- | :---: | :---: | :---: |
-| Streamable HTTP MCP | ✓ | ✓ | ✓ |
-| Marona health | ✓ | ✓ | ✓ |
-| Marona manifest | ✓ | ✓ | ✓ |
-| Hub registration | ✓ | ✓ | ✓ |
-| Standard structured results | ✓ | ✓ | ✓ |
-| Automated tests | ✓ | ✓ | ✓ |
-| Non-root Docker image | ✓ | ✓ | ✓ |
+| Contract | Python | TypeScript | Java | Rust |
+| --- | :---: | :---: | :---: | :---: |
+| Streamable HTTP MCP | ✓ | ✓ | ✓ | ✓ |
+| Marona health | ✓ | ✓ | ✓ | ✓ |
+| Marona manifest | ✓ | ✓ | ✓ | ✓ |
+| Hub registration | ✓ | ✓ | ✓ | ✓ |
+| Standard structured results | ✓ | ✓ | ✓ | ✓ |
+| Automated tests | ✓ | ✓ | ✓ | ✓ |
+| Non-root Docker image | ✓ | ✓ | ✓ | — |
 
 - [Python](examples/python/README.md) uses `marona-sdk==0.1.14`.
 - [TypeScript](examples/typescript/README.md) uses the official MCP SDK 2.0 and `marona-sdk` descriptors.
 - [Java](examples/java/README.md) uses the official MCP SDK 2.0 for the server,
   `ai.marona:marona-sdk:0.14.2` for Marona Hub access, and embedded Tomcat.
+- [Rust](examples/rust/README.md) uses the official `marona-sdk = "0.1.0"` crates.io package.
 
 All implementations expose the same two deterministic, read-only tools:
 `estimate_model_cost` and `format_release_notes`.
