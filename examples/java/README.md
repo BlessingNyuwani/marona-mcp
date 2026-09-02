@@ -19,8 +19,11 @@ After registering and publishing the App in Marona, discover its tools through
 the Hub-facing Java SDK:
 
 ```bash
-export MARONA_API_KEY=replace_with_your_marona_api_key
+export MARONA_API_KEY=mr_live_xxxxx # placeholder; use your real key locally
 export MARONA_APP_SLUG=developer-utilities-java-example
 mvn compile exec:java \
   -Dexec.mainClass=ai.marona.examples.mcp.DeveloperUtilitiesHubClient
 ```
+
+`MARONA_API_KEY` is mandatory for Marona Runtime discovery and tool calls. It
+authenticates the developer/project and is separate from provider credentials.
