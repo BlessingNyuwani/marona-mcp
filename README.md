@@ -6,6 +6,22 @@ be published to [Marona Platform](https://platform.marona.ai).
 Created and maintained by **Blessing Nyuwani**, Applied AI Engineer and creator
 of Marona AI Runtime.
 
+## Marona Developer Key is required
+
+Set `MARONA_API_KEY` before registering, publishing, discovering, or calling an
+MCP App through Marona Runtime:
+
+```bash
+export MARONA_API_KEY=mr_live_xxxxx # placeholder; use your real key locally
+```
+
+The key authenticates the developer and project with Marona. It is mandatory
+for every Marona Runtime operation and remains separate from model-provider or
+MCP-server credentials. Running the deterministic protocol server and its local
+tests does not contact Marona Runtime, but using that server through Marona does
+require the developer key. Create and manage keys at
+<https://platform.marona.ai>; never commit a real key.
+
 ## Implementations
 
 | Contract | Python | TypeScript | Java | Rust |
@@ -40,8 +56,9 @@ Inspect `/health`, `/manifest`, `/hub-registration`, and `/mcp` (Python uses
 `/mcp/`).
 
 See [architecture](docs/architecture.md) for the common contract. Publishing
-requires a public HTTPS endpoint and a Marona developer account; never put
-provider credentials in tool descriptors or registration metadata.
+requires a public HTTPS endpoint, a Marona developer account, and
+`MARONA_API_KEY`; never put developer or provider credentials in tool
+descriptors or registration metadata.
 
 ## License
 
