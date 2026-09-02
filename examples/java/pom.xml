@@ -12,11 +12,17 @@
     <maven.compiler.release>17</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <mcp.version>2.0.0</mcp.version>
+    <marona.sdk.version>0.14.2</marona.sdk.version>
     <tomcat.version>11.0.12</tomcat.version>
     <junit.version>5.12.2</junit.version>
   </properties>
 
   <dependencies>
+    <dependency>
+      <groupId>ai.marona</groupId>
+      <artifactId>marona-sdk</artifactId>
+      <version>${marona.sdk.version}</version>
+    </dependency>
     <dependency>
       <groupId>io.modelcontextprotocol.sdk</groupId>
       <artifactId>mcp</artifactId>
@@ -56,6 +62,11 @@
         <configuration><useModulePath>false</useModulePath></configuration>
       </plugin>
       <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>3.5.0</version>
+      </plugin>
+      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
         <version>3.6.0</version>
@@ -65,6 +76,14 @@
             <goals><goal>shade</goal></goals>
             <configuration>
               <createDependencyReducedPom>false</createDependencyReducedPom>
+              <artifactSet>
+                <excludes>
+                  <exclude>ai.marona:marona-sdk</exclude>
+                  <exclude>ai.marona:marona</exclude>
+                  <exclude>com.fasterxml.jackson.core:jackson-databind</exclude>
+                  <exclude>com.fasterxml.jackson.core:jackson-core</exclude>
+                </excludes>
+              </artifactSet>
               <transformers>
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer" />
                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">

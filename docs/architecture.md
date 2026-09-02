@@ -13,6 +13,7 @@ Marona Platform ── /health
 ```
 
 Python uses `marona-sdk`, which wraps the official MCP Python SDK. TypeScript
-and Java use the official MCP SDKs directly and layer Marona registration
-metadata beside the protocol endpoint. Tool implementations are deterministic,
-side-effect free, and return the same Marona standard result fields.
+and Java use the official MCP SDKs to host the protocol endpoint. The Java
+consumer uses `ai.marona:marona-sdk:0.14.2` to discover and invoke the published
+App through the Marona Hub. Tool implementations are deterministic, side-effect
+free, and return the same Marona standard result fields.

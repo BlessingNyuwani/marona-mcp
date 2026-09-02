@@ -20,7 +20,8 @@ of Marona AI Runtime.
 
 - [Python](examples/python/README.md) uses `marona-sdk==0.1.14`.
 - [TypeScript](examples/typescript/README.md) uses the official MCP SDK 2.0 and `marona-sdk` descriptors.
-- [Java](examples/java/README.md) uses the official MCP SDK 2.0 and embedded Tomcat.
+- [Java](examples/java/README.md) uses the official MCP SDK 2.0 for the server,
+  `ai.marona:marona-sdk:0.14.2` for Marona Hub access, and embedded Tomcat.
 - [Rust](examples/rust/README.md) uses the official `marona-sdk = "0.1.0"` crates.io package.
 
 All implementations expose the same two deterministic, read-only tools:
