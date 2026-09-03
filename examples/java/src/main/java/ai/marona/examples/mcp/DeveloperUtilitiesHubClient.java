@@ -2,7 +2,7 @@ package ai.marona.examples.mcp;
 
 import ai.marona.ConnectOptions;
 import ai.marona.MCPConnection;
-import ai.marona.mcp.MaronaMcp;
+import ai.marona.Marona;
 import com.fasterxml.jackson.databind.JsonNode;
 
 import java.util.List;
@@ -17,8 +17,8 @@ public final class DeveloperUtilitiesHubClient {
     }
 
     public static List<JsonNode> discoverTools(String apiKey, String appSlug) {
-        try (MaronaMcp mcp = new MaronaMcp(apiKey)) {
-            MCPConnection connection = mcp.connect(
+        try (Marona marona = new Marona(apiKey)) {
+            MCPConnection connection = marona.hub.connect(
                     ConnectOptions.builder()
                             .apps(appSlug)
                             .build()

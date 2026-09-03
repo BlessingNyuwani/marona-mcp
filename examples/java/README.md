@@ -2,7 +2,7 @@
 
 This example uses the official MCP Java SDK 2.0 Streamable HTTP servlet and an
 embedded Tomcat 11 runtime to host the protocol endpoint. It also resolves
-`ai.marona:marona-sdk:0.14.2` from Maven Central so Java applications can
+`ai.marona:marona:1.0.0` from Maven Central so Java applications can
 discover the published App and call its tools through the Marona Hub. No local
 SDK installation is required.
 
@@ -25,5 +25,6 @@ mvn compile exec:java \
   -Dexec.mainClass=ai.marona.examples.mcp.DeveloperUtilitiesHubClient
 ```
 
-`MARONA_API_KEY` is mandatory for Marona Runtime discovery and tool calls. It
+`MARONA_API_KEY` is mandatory for all Marona Runtime discovery and tool calls,
+including managed, BYOK, registered, private, self-hosted, and local models. It
 authenticates the developer/project and is separate from provider credentials.

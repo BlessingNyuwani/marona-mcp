@@ -12,7 +12,7 @@
     <maven.compiler.release>17</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <mcp.version>2.0.0</mcp.version>
-    <marona.sdk.version>0.14.2</marona.sdk.version>
+    <marona.version>1.0.0</marona.version>
     <tomcat.version>11.0.12</tomcat.version>
     <junit.version>5.12.2</junit.version>
   </properties>
@@ -20,8 +20,8 @@
   <dependencies>
     <dependency>
       <groupId>ai.marona</groupId>
-      <artifactId>marona-sdk</artifactId>
-      <version>${marona.sdk.version}</version>
+      <artifactId>marona</artifactId>
+      <version>${marona.version}</version>
     </dependency>
     <dependency>
       <groupId>io.modelcontextprotocol.sdk</groupId>
@@ -78,7 +78,6 @@
               <createDependencyReducedPom>false</createDependencyReducedPom>
               <artifactSet>
                 <excludes>
-                  <exclude>ai.marona:marona-sdk</exclude>
                   <exclude>ai.marona:marona</exclude>
                   <exclude>com.fasterxml.jackson.core:jackson-databind</exclude>
                   <exclude>com.fasterxml.jackson.core:jackson-core</exclude>
